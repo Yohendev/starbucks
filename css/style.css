@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header {
+    height: 200px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.logo {
+    flex: 0 0 120px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .center {
+        flex-direction: row;
+        padding: 0 5%;
+    }
+
+    .logo {
+        flex: 0 0 80px;
+    }
+
+    .menu {
+        gap: 15px;
+        justify-content: flex-end;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* Seção Sobre (mantida original) */
+section.sobre {
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+.extras {
+    position: absolute;
+    bottom: -450px;
+    right: -500px;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    background-color: #017143;
+}
+
+.social-media {
+    position: absolute;
+    right: 510px;
+    top: 200px;
+}
+
+.social-media img {
+    display: block;
+    width: 20px;
+    margin: 20px 0;
+}
+
+.texto-sobre {
+    margin-top: 100px;
+}
+
+.texto-sobre h1 {
+    font-size: 50px;
+}
+
+.texto-sobre p {
+    margin: 20px 0;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.texto-sobre button {
+    border: 0;
+    background-color: #017143;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Ajuste responsivo */
+@media (max-width: 1600px) {
+    .extras{
+        top:60%;
+        left: 50%;
+    }
+}
